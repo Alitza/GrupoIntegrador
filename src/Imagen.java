@@ -16,6 +16,7 @@ public class Imagen implements Comparable<Imagen> {
 		imagen= app.loadImage("../data/"+nombre +"."+ tipoArchivo);
 	}
 
+	
 	public int compareTo(Imagen o) {
 		int compara = nombre.compareTo(o.nombre);
 		return compara;

@@ -77,6 +77,7 @@ public class Logica {
 					compara = -1;
 				}
 				return compara;
+				
 			}
 		};
 

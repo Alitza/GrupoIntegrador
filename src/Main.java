@@ -17,6 +17,7 @@ public class Main extends PApplet {
 
 	public void mouseClicked() {
 log.aumentarAct();
+
 	}
 
 	public void mouseWheel() {// scroll
