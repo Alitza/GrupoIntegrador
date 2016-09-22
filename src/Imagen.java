@@ -8,13 +8,14 @@ public class Imagen implements Comparable<Imagen> {
 	private String tipoArchivo;
 	private int ancho, alto;
 
-	public Imagen(PApplet app, String nombre, String tipoArhchivo) {
+	public Imagen(PApplet app, String nombre, String tipoArchivo) {
 		this.app = app;
 		this.nombre = nombre;
 		this.tipoArchivo = tipoArchivo;
+		//cargo una imagen que no se cual es pero que corresponde al nombre y al tipo
+		imagen= app.loadImage("../data/"+nombre +"."+ tipoArchivo);
 	}
 
-	@Override
 	public int compareTo(Imagen o) {
 		int compara = nombre.compareTo(o.nombre);
 		return compara;
