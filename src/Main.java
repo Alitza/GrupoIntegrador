@@ -1,6 +1,8 @@
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class Main extends PApplet {
+
 	PApplet app;
 	Logica log;
 
@@ -16,7 +18,7 @@ public class Main extends PApplet {
 	}
 
 	public void mouseClicked() {
-log.aumentarAct();
+		log.aumentarAct();
 
 	}
 

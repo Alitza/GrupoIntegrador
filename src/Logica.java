@@ -11,8 +11,10 @@ import java.util.LinkedList;
 import java.util.TreeSet;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class Logica {
+	private PImage fondo;
 	private ArrayList<Imagen> imagenes;
 	private PApplet app;
 	private String[] nombreImagenes;
@@ -22,17 +24,18 @@ public class Logica {
 		imagenes = new ArrayList<Imagen>();
 		this.app = app;
 		cargarLista();
+		fondo = app.loadImage("fondo.jpg");
 	}
 
 	public void pintar() {
-		
+		app.image(fondo, 0, 0);
 		app.image(imagenes.get(imgact).getImagen(), 0, 0);
 	}
 
-	
-	public void aumentarAct(){
+	public void aumentarAct() {
 		imgact++;
 	}
+
 	private void cargarLista() {
 		// despues de crear un arreglo de string que es uncontenedor de muchos
 		// string o sea palabras cargo el txt
@@ -42,7 +45,8 @@ public class Logica {
 			// creo un arreglo de string para separar el nombre de la imagen del
 			// tipo de la imagen que esta en e txt
 			String[] nImagen = nombreImagenes[i].split(" ");
-			// creo todas las imagenes ,,,,,, 0 es el nombre como en pocision y 1 es el tipo 
+			// creo todas las imagenes ,,,,,, 0 es el nombre como en pocision y
+			// 1 es el tipo
 			Imagen ima = new Imagen(app, nImagen[0], nImagen[1]);
 			imagenes.add(ima);
 		}
@@ -77,13 +81,11 @@ public class Logica {
 					compara = -1;
 				}
 				return compara;
-				
+
 			}
 		};
 
 		Collections.sort(imagenes, c);
 	}
-
-
 
 }
