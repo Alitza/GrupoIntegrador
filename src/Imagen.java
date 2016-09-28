@@ -17,7 +17,7 @@ public class Imagen implements Comparable<Imagen> {
 	}
 
 	
-	public int compareTo(Imagen o) {
+	public int compareTo(Imagen o) { //metodo implementando el compareTo
 		int compara = nombre.compareTo(o.nombre);
 		return compara;
 	}
@@ -54,7 +54,7 @@ public class Imagen implements Comparable<Imagen> {
 		this.ancho = ancho;
 	}
 
-	public int getAlto() {
+	public int getAlto() { 
 		return alto;
 	}
 
