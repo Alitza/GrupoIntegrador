@@ -14,7 +14,7 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 public class Logica {
-	private PImage fondo;
+	private PImage interfaz;
 	private ArrayList<Imagen> imagenes;
 	private PApplet app;
 	private String[] nombreImagenes;
@@ -24,12 +24,14 @@ public class Logica {
 		imagenes = new ArrayList<Imagen>();
 		this.app = app;
 		cargarLista();
-		fondo = app.loadImage("fondo.jpg");
+		interfaz= app.loadImage("interfaz.png");
 	}
 
 	public void pintar() {
-		app.image(fondo, 0, 0);
+		app.image(interfaz, 0, 0);
+
 		app.image(imagenes.get(imgact).getImagen(), 0, 0);
+
 	}
 
 	public void aumentarAct() {
